@@ -66,7 +66,27 @@
 					"remoteRoot": "/source"
 				}],
 				"django": true
-			}
+			},
+			{
+				"name": "Python Debugger: nautobot-server test tests --keepdb",
+				"type": "debugpy",
+				"request": "launch",
+				"console": "integratedTerminal",
+				// Change program's value to : which nautobot-server
+            	"program": "/home/adil/.cache/pypoetry/virtualenvs/nautobot-s1QlH6ZP-py3.11/bin/nautobot-server",
+				"cwd": "${workspaceFolder}/test_mock",
+				"args": [
+					"test",
+					"tests",
+					"--keepdb",
+					"-t",
+					"."
+				],
+				"justMyCode": false,
+				"env": {
+					"NAUTOBOT_CONFIG": "${workspaceFolder}/nautobot_config.py"
+				}
+			},
 		]
 	}
 }
