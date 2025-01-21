@@ -30,3 +30,17 @@ CACHES = {
 
 
 JOBS_ROOT = "/home/adil/github/dev/nautobot/test_mock"
+
+import sys
+if 'test' in sys.argv:
+    DATABASES = {
+        'default': {
+            'NAME': 'test_mock',                         # Database name
+            'USER': 'nautobot',                         # Database username
+            'PASSWORD': os.getenv("NAUTOBOT_DB_PASSWORD", "nautobot"),                     # Database password
+            'HOST': 'localhost',                        # Database server
+            'PORT': '5432',                             # Database port (leave blank for default)
+            'CONN_MAX_AGE': 300,                        # Max database connection age
+            'ENGINE': 'django.db.backends.postgresql',  # Database driver ("mysql" or "postgresql")
+        },
+    }

@@ -1,7 +1,7 @@
 from nautobot.core.jobs import Job
-from .utils.my_dependency import check_file
+from ..utils.my_dependency import check_file
 
-class MyJob(Job):
+class MyJob2(Job):
     class Meta:
         name = 'MyJob'
         description = 'My Job'

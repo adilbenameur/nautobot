@@ -85,7 +85,7 @@
 				"justMyCode": false,
 				"env": {
 					"NAUTOBOT_CONFIG": "${workspaceFolder}/nautobot_config.py"
-				}
+				},
 			},
 		]
 	}

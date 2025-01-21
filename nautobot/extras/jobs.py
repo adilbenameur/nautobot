@@ -1126,7 +1126,7 @@ def run_job(self, job_class_path, *args, **kwargs):
     """
     logger.debug("Running job %s", job_class_path)
 
-    job_class = get_job(job_class_path, reload=True)
+    job_class = get_job(job_class_path, reload=False)
     if job_class is None:
         raise KeyError(f"Job class not found for class path {job_class_path}")
     job = job_class()
